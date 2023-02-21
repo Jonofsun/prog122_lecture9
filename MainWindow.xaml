@@ -6,7 +6,37 @@
         xmlns:local="clr-namespace:prog122_lecture9"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <RichTextBox Margin="250,33,250,34">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="runReciept" Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Canvas Margin="568,33,20,211" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <RadioButton x:Name="rbSmallD" Content="SMALL -$2" Canvas.Left="21" Canvas.Top="18" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbMediumD" Content="MEDIUM -$2.69" Canvas.Left="21" Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbLargeD" Content="LARGE -$3.25" Canvas.Left="21" Canvas.Top="88" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbEXD" Content="EX LARGE -$7.50" Canvas.Left="21" Canvas.Top="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="DRINK SIZE" Canvas.Left="21" Canvas.Top="154"/>
+        </Canvas>
+        <Canvas Margin="10,33,578,211" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <RadioButton x:Name="rbSmallP" Content="SMALL -$13" Canvas.Left="21" Canvas.Top="18" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbMediumP" Content="MEDIUM -$15" Canvas.Left="21" Canvas.Top="56" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbLargeP" Content="LARGE -$18" Canvas.Left="21" Canvas.Top="125" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbEXP" Content="EX LARGE -$20" Canvas.Left="21" Canvas.Top="88" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="PIZZA SIZE" Canvas.Left="21" Canvas.Top="154"/>
+        </Canvas>
+        <Canvas Margin="10,234,578,10" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <CheckBox x:Name="cbPepperoni" Content="PEPPERONI -$4" Canvas.Left="18" Canvas.Top="19"/>
+            <CheckBox x:Name="cbCheese" Content="CHEESE -$5" Canvas.Left="18" Canvas.Top="62" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <CheckBox x:Name="cbMushrooms" Content="MUSHROOMS -$2" Canvas.Left="18" Canvas.Top="95" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <CheckBox x:Name="cbPineapple" Content="PINAPPLE -$20" Canvas.Left="19" Canvas.Top="130" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnOrder" Content="ORDER PIZZA" Canvas.Left="19" Canvas.Top="157" HorizontalAlignment="Left" VerticalAlignment="Center" Width="139" Click="btnOrder_Click"/>
+        </Canvas>
+        <TextBox x:Name="txtCustomer" HorizontalAlignment="Left" Margin="601,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="CUSTOMER NAME" HorizontalAlignment="Left" Margin="601,228,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
